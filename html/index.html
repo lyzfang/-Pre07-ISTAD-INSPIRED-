@@ -1,1246 +1,824 @@
-﻿<!DOCTYPE html>
+﻿```
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>STADIA — Showcase Your Projects</title>
-  <meta name="description"
-    content="STADIA is a project showcase platform for ISTAD students — browse, share, and get feedback on real student work.">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="STADIA — Showcase Your Projects">
-  <meta property="og:description"
-    content="STADIA is a project showcase platform for ISTAD students — browse, share, and get feedback on real student work.">
-  <meta property="og:image" content="../image/stadia-logo-transparent.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="STADIA — Showcase Your Projects">
-  <meta name="twitter:description"
-    content="STADIA is a project showcase platform for ISTAD students — browse, share, and get feedback on real student work.">
-  <script>(function () { try { var t = localStorage.getItem('stadia_theme'); if (!t) { t = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light'; } if (t === 'dark') document.documentElement.classList.add('dark'); } catch (e) { } })();</script>
-  <link href="../src/output.css" rel="stylesheet">
-  <style>
-    .sw {
-      padding: 3rem 1.5rem;
-      max-width: 1100px;
-      margin: 0 auto;
-      font-family: system-ui, sans-serif;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STADIA — Showcase Your Projects</title>
+<meta name="description" content="STADIA is a project showcase platform for ISTAD students — browse, share, and get feedback on real student work.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="STADIA — Showcase Your Projects">
+<meta property="og:description" content="STADIA is a project showcase platform for ISTAD students — browse, share, and get feedback on real student work.">
+<meta property="og:image" content="../image/stadia-logo-transparent.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="STADIA — Showcase Your Projects">
+<meta name="twitter:description" content="STADIA is a project showcase platform for ISTAD students — browse, share, and get feedback on real student work.">
+<script>(function(){try{var t=localStorage.getItem('stadia_theme');if(!t){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}if(t==='dark')document.documentElement.classList.add('dark');}catch(e){}})();</script>
 
-    .sw-head {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      margin-bottom: 2.5rem;
-    }
-
-    .sw-line {
-      flex: 1;
-      max-width: 70px;
-      height: 2px;
-      background: #dc2626;
-      border-radius: 2px;
-    }
-
-    .sw-title {
-      color: #dc2626;
-      font-weight: 900;
-      font-size: 1.05rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-
-    .sw-layout {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-      align-items: center;
-    }
-
-    .sw-cards {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-
-    .sc {
-      background: #fff;
-      border: 1px solid #ede9fe;
-      border-radius: 16px;
-      padding: 1.4rem 1.2rem 1.4rem 1rem;
-      border-left: 4px solid #7c3aed;
-      display: flex;
-      flex-direction: column;
-      gap: 0.7rem;
-      transition: border-color .2s, transform .2s;
-    }
-
-    .sc:hover {
-      border-left-color: #5b21b6;
-      transform: translateY(-2px);
-    }
-
-    .sc-icon {
-      width: 42px;
-      height: 42px;
-      border-radius: 11px;
-      background: #f5f3ff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.3rem;
-    }
-
-    .sc-label {
-      font-size: 11.5px;
-      font-weight: 800;
-      color: #7c3aed;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      line-height: 1.3;
-    }
-
-    .sc-text {
-      font-size: 13.5px;
-      line-height: 1.65;
-      color: #666;
-    }
+<link href="../src/output.css" rel="stylesheet">
+<style>
+   .sw { padding: 3rem 1.5rem; max-width: 1100px; margin: 0 auto; font-family: system-ui, sans-serif; }
+  .sw-head { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 2.5rem; }
+  .sw-line { flex: 1; max-width: 70px; height: 2px; background: #dc2626; border-radius: 2px; }
+  .sw-title { color: #dc2626; font-weight: 900; font-size: 1.05rem; letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap; }
+  .sw-layout { display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: center; }
+  .sw-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .sc { background: #fff; border: 1px solid #ede9fe; border-radius: 16px; padding: 1.4rem 1.2rem 1.4rem 1rem; border-left: 4px solid #7c3aed; display: flex; flex-direction: column; gap: 0.7rem; transition: border-color .2s, transform .2s; }
+  .sc:hover { border-left-color: #5b21b6; transform: translateY(-2px); }
+  .sc-icon { width: 42px; height: 42px; border-radius: 11px; background: #f5f3ff; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; }
+  .sc-label { font-size: 11.5px; font-weight: 800; color: #7c3aed; letter-spacing: 0.08em; text-transform: uppercase; line-height: 1.3; }
+  .sc-text { font-size: 13.5px; line-height: 1.65; color: #666; }
 
 
-    .sw-img {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      order: -1;
-    }
+  .sw-img { display: flex; align-items: center; justify-content: center; order: -1; }
+  .sw-img img { width: 100%; max-width: 340px; border-radius: 20px; object-fit: cover; }
 
-    .sw-img img {
-      width: 100%;
-      max-width: 340px;
-      border-radius: 20px;
-      object-fit: cover;
-    }
+  @media (max-width: 480px) {
+    .sw-cards { grid-template-columns: 1fr; }
+    .sw { padding: 2rem 1rem; }
+  }
 
-    @media (max-width: 480px) {
-      .sw-cards {
-        grid-template-columns: 1fr;
-      }
+  @media (min-width: 780px) {
+    .sw-layout { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+    .sw-img { order: 0; } 
+  }
+ 
+  @media (min-width: 900px) {
+    .sw-layout { grid-template-columns: 45fr 55fr; gap: 3rem; }
+    .sw { padding: 3.5rem 2.5rem; }
+  }
+   .bw { padding: 3rem 1.5rem; max-width: 1100px; margin: 0 auto; }
+  .bw-head { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 2.5rem; }
+  .bw-line { flex: 1; max-width: 70px; height: 2px; background: #dc2626; border-radius: 2px; }
+  .bw-title { color: #dc2626; font-weight: 900; font-size: 1.05rem; letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap; }
+  .bw-layout { display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: center; }
+  .bw-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .bc { background: #fff; border: 1px solid #f0eeee; border-radius: 16px; padding: 1.4rem 1.2rem 1.4rem 1rem; border-left: 4px solid #dc2626; display: flex; flex-direction: column; gap: 0.7rem; transition: border-color .2s, transform .2s; }
+  .bc:hover { border-left-color: #991b1b; transform: translateY(-2px); }
+  .bc-icon { width: 42px; height: 42px; border-radius: 11px; background: #fff1f0; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; }
+  .bc-label { font-size: 11.5px; font-weight: 800; color: #dc2626; letter-spacing: 0.08em; text-transform: uppercase; line-height: 1.3; }
+  .bc-text { font-size: 13.5px; line-height: 1.65; color: #666; }
+  .bw-img { display: flex; align-items: center; justify-content: center; }
+  .bw-img img { width: 100%; max-width: 300px; height: 300px; border-radius: 20px; object-fit: cover; }
 
-      .sw {
-        padding: 2rem 1rem;
-      }
-    }
+  @media (max-width: 480px) {
+    .bw-cards { grid-template-columns: 1fr; }
+    .bw { padding: 2rem 1rem; }
+  }
+  @media (min-width: 780px) {
+    .bw-layout { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+  }
+  @media (min-width: 900px) {
+    .bw-layout { grid-template-columns: 55fr 45fr; gap: 3rem; }
+    .bw { padding: 3.5rem 2.5rem; }
+  }
+  
+   .marquee-wrap {
+    overflow: hidden;
+  }
+  .marquee-track {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    animation: marquee-scroll 55s linear infinite;
+    will-change: transform;
+  }
+  .marquee-wrap:hover .marquee-track {
+    animation-play-state: paused;
+  }
+  @keyframes marquee-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
 
-    @media (min-width: 780px) {
-      .sw-layout {
-        grid-template-columns: 1fr 1fr;
-        gap: 2.5rem;
-      }
+  .marquee-group {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+    padding-right: 0.75rem;
+  }
 
-      .sw-img {
-        order: 0;
-      }
-    }
+  .marquee-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    white-space: nowrap;
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.03em;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    transition: background-color 0.2s ease;
+  }
+  .marquee-pill:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
 
-    @media (min-width: 900px) {
-      .sw-layout {
-        grid-template-columns: 45fr 55fr;
-        gap: 3rem;
-      }
-
-      .sw {
-        padding: 3.5rem 2.5rem;
-      }
-    }
-
-    .bw {
-      padding: 3rem 1.5rem;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .bw-head {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      margin-bottom: 2.5rem;
-    }
-
-    .bw-line {
-      flex: 1;
-      max-width: 70px;
-      height: 2px;
-      background: #dc2626;
-      border-radius: 2px;
-    }
-
-    .bw-title {
-      color: #dc2626;
-      font-weight: 900;
-      font-size: 1.05rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-
-    .bw-layout {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
-      align-items: center;
-    }
-
-    .bw-cards {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-    }
-
-    .bc {
-      background: #fff;
-      border: 1px solid #f0eeee;
-      border-radius: 16px;
-      padding: 1.4rem 1.2rem 1.4rem 1rem;
-      border-left: 4px solid #dc2626;
-      display: flex;
-      flex-direction: column;
-      gap: 0.7rem;
-      transition: border-color .2s, transform .2s;
-    }
-
-    .bc:hover {
-      border-left-color: #991b1b;
-      transform: translateY(-2px);
-    }
-
-    .bc-icon {
-      width: 42px;
-      height: 42px;
-      border-radius: 11px;
-      background: #fff1f0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.3rem;
-    }
-
-    .bc-label {
-      font-size: 11.5px;
-      font-weight: 800;
-      color: #dc2626;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      line-height: 1.3;
-    }
-
-    .bc-text {
-      font-size: 13.5px;
-      line-height: 1.65;
-      color: #666;
-    }
-
-    .bw-img {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .bw-img img {
-      width: 100%;
-      max-width: 300px;
-      height: 300px;
-      border-radius: 20px;
-      object-fit: cover;
-    }
-
-    @media (max-width: 480px) {
-      .bw-cards {
-        grid-template-columns: 1fr;
-      }
-
-      .bw {
-        padding: 2rem 1rem;
-      }
-    }
-
-    @media (min-width: 780px) {
-      .bw-layout {
-        grid-template-columns: 1fr 1fr;
-        gap: 2.5rem;
-      }
-    }
-
-    @media (min-width: 900px) {
-      .bw-layout {
-        grid-template-columns: 55fr 45fr;
-        gap: 3rem;
-      }
-
-      .bw {
-        padding: 3.5rem 2.5rem;
-      }
-    }
-
-    .marquee-wrap {
-      overflow: hidden;
-    }
-
+  @media (prefers-reduced-motion: reduce) {
     .marquee-track {
-      display: flex;
-      align-items: center;
-      width: max-content;
-      animation: marquee-scroll 55s linear infinite;
-      will-change: transform;
+      animation: none;
     }
-
-    .marquee-wrap:hover .marquee-track {
-      animation-play-state: paused;
+  }
+.letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: letterIn 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  }
+ 
+  @keyframes letterIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
+  }
 
-    @keyframes marquee-scroll {
-      from {
-        transform: translateX(0);
-      }
+  .letter.space {
+    width: 0.35em;
+  }
 
-      to {
-        transform: translateX(-50%);
-      }
-    }
-
-    .marquee-group {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      flex-shrink: 0;
-      padding-right: 0.75rem;
-    }
-
-    .marquee-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      white-space: nowrap;
-      background: rgba(255, 255, 255, 0.12);
-      color: #fff;
-      font-weight: 700;
-      font-size: 0.75rem;
-      letter-spacing: 0.03em;
-      padding: 0.5rem 1rem;
-      border-radius: 9999px;
-      transition: background-color 0.2s ease;
-    }
-
-    .marquee-pill:hover {
-      background: rgba(255, 255, 255, 0.2);
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .marquee-track {
-        animation: none;
-      }
-    }
-
-    .letter {
-      display: inline-block;
-      opacity: 0;
-      transform: translateY(30px);
-      animation: letterIn 0.6s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
-    }
-
-    @keyframes letterIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .letter.space {
-      width: 0.35em;
-    }
-
-    @keyframes slideInUp {
+   @keyframes slideInUp {
       from {
         opacity: 0;
         transform: translateY(80px);
       }
-
       to {
         opacity: 1;
         transform: translateY(0);
       }
     }
-
+ 
     @keyframes slideInRight {
       from {
         opacity: 0;
         transform: translateX(80px);
       }
-
       to {
         opacity: 1;
         transform: translateX(0);
       }
     }
-
+ 
     .reveal-img {
       opacity: 1;
       animation: slideInUp 5s ease-out 5s forwards;
       animation-timeline: view(100px);
       animation-range: entry 0% cover 30%;
     }
-
+ 
     .reveal-text {
       opacity: 0;
       animation: slideInRight 5s ease-out 5s forwards;
       animation-timeline: view();
       animation-range: entry 0% cover 30%;
     }
-
+ 
     @supports not (animation-timeline: view()) {
-
       .reveal-img,
       .reveal-text {
         opacity: 1;
         transform: translateY(0) translateX(0);
       }
-
-    }
-
-    @keyframes slideInUp {
+    
+    }@keyframes slideInUp {
       from {
         opacity: 0;
         transform: translateX(65%);
       }
-
       to {
         opacity: 1;
         transform: translateY(0%);
       }
     }
-
+ 
     @keyframes slideInRight {
       from {
         opacity: 0;
         transform: translateY(65%);
       }
-
       to {
         opacity: 1;
         transform: translateY(0%);
       }
     }
-
+ 
     .reveal-img1 {
       opacity: 1;
       animation: slideInUp 5s ease-out 5s forwards;
       animation-timeline: view(65%);
       animation-range: entry 0% cover 30%;
     }
-
+ 
     .reveal-text1 {
       opacity: 100%;
       animation: slideInUp 5s ease-out 5s forwards;
       animation-timeline: view();
       animation-range: entry 0% cover 30%;
     }
-
+ 
     @supports not (animation-timeline: view()) {
-
       .reveal-img1,
       .reveal-text1 {
         opacity: 100%;
         transform: translateX(60%) translateY(0);
       }
     }
-
     .reveal-text2 {
       opacity: 1;
       animation: slideInUp 5s ease-out 5s forwards;
       animation-timeline: view(65%);
       animation-range: entry 0% cover 30%;
     }
-
+ 
     .reveal-text2 {
       opacity: 100%;
       animation: slideInUp 5s ease-out 5s forwards;
       animation-timeline: view();
       animation-range: entry 0% cover 30%;
     }
-
+ 
     @supports not (animation-timeline: view()) {
-
       .reveal-img2,
       .reveal-text2 {
         opacity: 100%;
         transform: translateY(0) translateX(60%);
       }
     }
+    
 
 
-    /* ============================================
-      Dark mode fixes specific to this page.
-      ============================================ */
-    .dark body.bg-white,
-    .dark body {
-      background-color: #0f1014 !important;
-      color: #e5e7eb !important;
-    }
-
-    /* Navbar */
-    .dark nav.bg-white,
-    .dark nav {
-      background-color: #131419 !important;
-      border-color: #23252c !important;
-    }
-
-    .dark nav .border-gray-200,
-    .dark nav .border-t {
-      border-color: #23252c !important;
-    }
-
-    .dark nav button.bg-gray-100 {
-      background-color: #23252c !important;
-      color: #e5e7eb !important;
-    }
-
-    /* Footer */
-    .dark footer,
-    .dark footer.bg-\[\#f5f5f7\] {
-      background-color: #131419 !important;
-    }
-
-    .dark footer .border-gray-200,
-    .dark footer .border-t {
-      border-color: #2a2c34 !important;
-    }
-
-    /* Section / card backgrounds that should follow dark mode */
-    .dark section.bg-white {
-      background-color: #16171d !important;
-    }
-
-    .dark .bg-white {
-      background-color: #1a1b23 !important;
-    }
-
-    .dark .border-gray-100,
-    .dark .border-slate-200,
-    .dark .border-gray-200 {
-      border-color: #23252c !important;
-    }
-
-    /* Headings / body text that are hard-coded dark -> light */
-    .dark .text-\[\#1c1c2e\],
-    .dark .text-black,
-    .dark .text-slate-900,
-    .dark .text-slate-700,
-    .dark .text-slate-800,
-    .dark .text-gray-900 {
-      color: #e5e7eb !important;
-    }
-
-    .dark .text-slate-600,
-    .dark .text-gray-700,
-    .dark .text-gray-500,
-    .dark .text-gray-400 {
-      color: #a8adb8 !important;
-    }
-
-    /* Benefits icon circles still readable in dark mode */
-    .dark .bg-orange-50 {
-      background-color: rgba(255, 159, 67, 0.12) !important;
-    }
-
-    /* Benefit list icons: black in light mode, white in dark mode */
-    li .fa-solid {
-      color: #111827 !important;
-    }
-
-    .dark li .fa-solid {
-      color: #e5e7eb !important;
-    }
-
-    /* Footer social / Font Awesome brand icons: black in light mode, white in dark mode */
-    footer .fa-brands {
-      color: #111827 !important;
-    }
-
-    .dark footer .fa-brands {
-      color: #e5e7eb !important;
-    }
-  </style>
+ 
+</style>
 </head>
-
-<body class="bg-white  text-[#1c1c2e] font-[Segoe UI,Arial,sans-serif] font-size:18px">
-  <nav class="bg-white sticky  top-0 z-50 shadow-sm">
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-2.5">
-      <a href="./index.html" class=" items-center gap-2 font-extrabold text-navy tracking-wide text-sm">
-        <img src="../image/stadia-logo-transparent.png" class="h-15 w-auto">
-      </a>
-      <div class="hidden md:flex items-center gap-1 bg-white border border-gray-200 rounded-full p-1">
-
-        <a href="./projects.html"
-          class="px-5 py-2 rounded-full text-sm font-semibold text-gray-500 hover:text-navy">PROJECT</a>
-        <a href="./create-project.html" data-requires-auth
-          class="px-5 py-2 rounded-full text-sm font-semibold text-gray-500 hover:text-navy">POST CREATOR</a>
-        <a href="./about-us.html"
-          class="px-5 py-2 rounded-full text-sm font-semibold text-gray-500 hover:text-navy">ABOUT US</a>
-      </div>
-      <div class="flex items-center gap-3">
-        <div class="hidden md:flex items-center gap-3">
-          <div data-auth="guest" class="flex items-center gap-2">
-            <a href="./login.html"
-              class="px-4 py-2 rounded-full text-sm font-semibold text-gray-500 hover:text-navy">Sign In</a>
-            <a href="./signup.html"
-              class="px-4 py-2 rounded-full text-sm font-semibold bg-[#2b2a3a] text-white hover:bg-black">Sign Up</a>
-          </div>
-          <div data-auth="user" class="hidden flex items-center gap-2">
-            <a href="./dashboard.html"
-              class="flex items-center gap-2 pl-1.5 pr-3 py-1.5 rounded-full text-sm font-semibold text-gray-500 hover:text-navy"
-              title="Account">
-              <span data-auth="user-avatar"
-                class="w-7 h-7 rounded-full overflow-hidden flex items-center justify-center text-white text-xs font-bold shrink-0 bg-gray-300"></span>
-              <span data-auth="user-name">Account</span>
-            </a>
-            <button type="button" data-action="logout"
-              class="px-4 py-2 rounded-full text-sm font-semibold bg-[#2b2a3a] text-white hover:bg-black">Log
-              out</button>
-          </div>
+<body class="bg-white text-[#1c1c2e] font-[Segoe UI,Arial,sans-serif]">
+<nav class="bg-white sticky top-0 z-50 shadow-sm">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-2.5">
+    <a href="./index.html" class=" items-center gap-2 font-extrabold text-navy tracking-wide text-sm">
+      <img src="../image/stadia-logo-transparent.png" class="h-15 w-auto">
+    </a>
+    <div class="hidden md:flex items-center gap-1 bg-white border border-gray-200 rounded-full p-1">
+      <a href="./projects.html" class="px-5 py-2 rounded-full text-sm font-semibold  text-gray-500">PROJECT</a>
+      <a href="./create-project.html" data-requires-auth class="px-5 py-2 rounded-full text-sm font-semibold text-gray-500 hover:text-navy">POST CREATOR</a>
+      <a href="./about-us.html" class="px-5 py-2 rounded-full text-sm font-semibold text-gray-500 hover:text-navy">ABOUT US</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <div class="hidden md:flex items-center gap-3">
+        <div data-auth="guest" class="flex items-center gap-2">
+          <a href="./login.html" class="px-4 py-2 rounded-full text-sm font-semibold text-gray-500 hover:text-navy">Sign In</a>
+          <a href="./SignUp.html" class="px-4 py-2 rounded-full text-sm font-semibold bg-[#2b2a3a] text-white hover:bg-black">Sign Up</a>
         </div>
-        <button type="button" data-action="toggle-theme" title="Toggle dark mode"
-          class="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-gray-200 transition">
-          <svg class="theme-icon-sun w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-            stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M12 3v1m0 16v1m8.66-9h-1M4.34 12h-1m14.14 6.66l-.7-.7M7.05 7.05l-.7-.7m11.32 0l-.7.7M7.05 16.95l-.7.7M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-          </svg>
-          <svg class="theme-icon-moon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-          </svg>
-        </button>
-        <button data-collapse-toggle="mobile-menu" type="button"
-          class="md:hidden w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center">☰</button>
-      </div>
-    </div>
-    <div class="hidden md:!hidden px-6 pb-4" id="mobile-menu">
-      <a href="./projects.html" class="block py-2 font-semibold text-navy">PROJECT</a>
-      <a href="./create-project.html" data-requires-auth class="block py-2 font-semibold text-gray-500">POST CREATOR</a>
-      <a href="./about-us.html" class="block py-2 font-semibold text-gray-500">ABOUT US</a>
-      <div data-auth="guest" class="pt-2 mt-2 border-t border-gray-100 flex items-center gap-3">
-        <a href="./login.html" class="font-semibold text-gray-500">Sign In</a>
-        <a href="./signup.html" class="font-semibold text-[#564CE5]">Sign Up</a>
-      </div>
-      <div data-auth="user" class="hidden pt-2 mt-2 border-t border-gray-100 flex items-center gap-3">
-        <a href="./dashboard.html" class="flex items-center gap-2 font-semibold text-gray-500" title="Account">
-          <span data-auth="user-avatar"
-            class="w-6 h-6 rounded-full overflow-hidden flex items-center justify-center text-white text-[10px] font-bold shrink-0 bg-gray-300"></span>
-          <span data-auth="user-name">Account</span>
-        </a>
-        <button type="button" data-action="logout" class="font-semibold text-red-600">Log out</button>
-      </div>
-    </div>
-  </nav>
-
-  <section
-    class=" max-w-6xl mx-auto px-6 py-12 md:py-20 flex flex-col md:flex-row items-center justify-between gap-10 md:gap-16"
-    id="margin">
-    <div class="grid justify-start md:mr-[50px] lg:mr-[100px]">
-      <div class=" p-5 flex-1 text-center md:text-left text-[#564CE5] " data-aos="fade-right">
-        <h1 class="letter text-xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-[#564CE5]">
-          <span class="text-[#564CE5]" id="red">Showcase Your Projects </span><br class="hidden md:inline" /> <span
-            class="text-yellow-500 text-2xl ">Inspire the Next Generation</span>
-        </h1>
-        <p class="mt-6 text-gray-500 text-base md:text-lg leading-relaxed max-w-lg mx-auto md:mx-0">
-          Publish your best work, discover innovative student projects, receive valuable feedback, and build a portfolio
-          that prepares you for future careers.
-        </p>
-        <div class="mt-8 flex justify-center md:justify-start">
-          <a href="./about-us.html"
-            class="inline-block bg-[#564CE5] hover:bg-[#4338CA] text-white font-bold text-sm md:text-base px-8 py-3.5 rounded-lg shadow-md hover:shadow-lg active:scale-98 transition-all duration-200 cursor-pointer">
-            Learn more
+        <div data-auth="user" class="hidden flex items-center gap-2">
+          <a href="./dashboard.html" class="flex items-center gap-2 pl-1.5 pr-3 py-1.5 rounded-full text-sm font-semibold text-gray-500 hover:text-navy" title="Account">
+            <span data-auth="user-avatar" class="w-7 h-7 rounded-full overflow-hidden flex items-center justify-center text-white text-xs font-bold shrink-0 bg-gray-300"></span>
+            <span data-auth="user-name">Account</span>
           </a>
+          <button type="button" data-action="logout" class="px-4 py-2 rounded-full text-sm font-semibold bg-[#2b2a3a] text-white hover:bg-black">Log out</button>
         </div>
       </div>
-    </div>
-    </div>
-    <div class="grid justify-end md:mr-[50px] lg:mr-[100px]">
-      <div class="flex-1 flex letter justify-center md:justify-end" data-aos="fade-left" data-aos-delay="150">
-        <div
-          class="relative w-full max-w-[320px] sm:max-w-[380px] md:max-w-[450px] aspect-square flex items-center justify-center">
-          <img src="../image/all.png" class="w-full max-w-[900px] h-[900px]  ">
-        </div>
-      </div>
-    </div>
-    </div>
-  </section>
-  <div class="marquee-wrap bg-[#564CE5] py-3" id="animation-letters">
-    <div class="marquee-track">
-      <div class="marquee-group">
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>STUDENT PROJECTS</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>POPULAR</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>EXCELLENT WORK</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>CREATIVE</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>SHOWCASE</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>BEST WORK</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>POSTED DAILY</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>STUDENTS</span>
-      </div>
-      <div class="marquee-group" aria-hidden="true">
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>STUDENT PROJECTS</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>POPULAR</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>EXCELLENT WORK</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>CREATIVE</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>SHOWCASE</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>BEST WORK</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>POSTED DAILY</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>STUDENTS</span>
-      </div>
-      <div class="marquee-group" aria-hidden="true">
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>STUDENT PROJECTS</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>POPULAR</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>EXCELLENT WORK</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>CREATIVE</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>SHOWCASE</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>BEST WORK</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>POSTED DAILY</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>STUDENTS</span>
-      </div>
-      <div class="marquee-group" aria-hidden="true">
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>STUDENT PROJECTS</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>POPULAR</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>EXCELLENT WORK</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>CREATIVE</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>SHOWCASE</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>BEST WORK</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>POSTED DAILY</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>STUDENTS</span>
-      </div>
+      <button type="button" data-action="toggle-theme" title="Toggle dark mode" class="w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-gray-200 transition">
+        <svg class="theme-icon-sun w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m8.66-9h-1M4.34 12h-1m14.14 6.66l-.7-.7M7.05 7.05l-.7-.7m11.32 0l-.7.7M7.05 16.95l-.7.7M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+        <svg class="theme-icon-moon w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+        </svg>
+      </button>
+      <button data-collapse-toggle="mobile-menu" type="button" class="md:hidden w-9 h-9 rounded-full bg-gray-100 flex items-center justify-center">☰</button>
     </div>
   </div>
-  <section>
-    <div class="sw">
-      <div class="sw-head">
-        <div class="sw-line"></div>
-        <span class="sw-title">Benefits for students</span>
-        <div class="sw-line"></div>
+  <div class="hidden md:!hidden px-6 pb-4" id="mobile-menu">
+    <a href="./projects.html" class="block py-2 font-semibold text-navy">PROJECT</a>
+    <a href="./create-project.html" data-requires-auth class="block py-2 font-semibold text-gray-500">POST CREATOR</a>
+    <a href="./about-us.html" class="block py-2 font-semibold text-gray-500">ABOUT US</a>
+    <div data-auth="guest" class="pt-2 mt-2 border-t border-gray-100 flex items-center gap-3">
+      <a href="./login.html" class="font-semibold text-gray-500">Sign In</a>
+      <a href="./SignUp.html" class="font-semibold text-[#564CE5]">Sign Up</a>
+    </div>
+    <div data-auth="user" class="hidden pt-2 mt-2 border-t border-gray-100 flex items-center gap-3">
+      <a href="./dashboard.html" class="flex items-center gap-2 font-semibold text-gray-500" title="Account">
+        <span data-auth="user-avatar" class="w-6 h-6 rounded-full overflow-hidden flex items-center justify-center text-white text-[10px] font-bold shrink-0 bg-gray-300"></span>
+        <span data-auth="user-name">Account</span>
+      </a>
+      <button type="button" data-action="logout" class="font-semibold text-red-600">Log out</button>
+    </div>
+  </div>
+</nav>
+
+<section class=" max-w-6xl mx-auto px-6 py-12 md:py-20 flex flex-col md:flex-row items-center justify-between gap-10 md:gap-16" id="margin">
+  <div class="grid justify-start md:mr-[50px] lg:mr-[100px]">
+  <div class=" p-5 flex-1 text-center md:text-left text-[#564CE5] " data-aos="fade-right">
+    <h1 class="letter text-xl md:text-4xl lg:text-5xl font-extrabold leading-tight text-[#564CE5]">
+      <span class="text-[#564CE5]" id="red">Showcase Your Projects  </span><br class="hidden md:inline" /> <span class="text-yellow-500 text-2xl ">Inspire the Next Generation</span>
+    </h1>
+    <p class="mt-6 text-gray-500 text-base md:text-lg leading-relaxed max-w-lg mx-auto md:mx-0">
+      Publish your best work, discover innovative student projects, receive valuable feedback, and build a portfolio that prepares you for future careers.
+    </p>
+    <div class="mt-8 flex justify-center md:justify-start">
+      <a href="./about-us.html" class="inline-block bg-[#564CE5] hover:bg-[#4338CA] text-white font-bold text-sm md:text-base px-8 py-3.5 rounded-lg shadow-md hover:shadow-lg active:scale-98 transition-all duration-200 cursor-pointer">
+        Learn more
+      </a>
+    </div>
+    </div>
+  </div>
+  </div>
+  <div class="grid justify-end md:mr-[50px] lg:mr-[100px]">
+  <div class="flex-1 flex letter justify-center md:justify-end" data-aos="fade-left" data-aos-delay="150">
+    <div class="relative w-full max-w-[320px] sm:max-w-[380px] md:max-w-[450px] aspect-square flex items-center justify-center">
+      <img src="../image/all.png" class="w-full max-w-[900px] h-[900px]  ">
+    </div>
+  </div>
+  </div>
+  </div>
+</section>
+<div class="marquee-wrap bg-[#564CE5] py-3" id="animation-letters">
+  <div class="marquee-track">
+    <div class="marquee-group">
+      <span class="marquee-pill"><span class="text-yellow-300">✦</span>STUDENT PROJECTS</span>
+      <span class="marquee-pill"><span class="text-yellow-300">✦</span>POPULAR</span>
+      <span class="marquee-pill"><span class="text-yellow-300">✦</span>EXCELLENT WORK</span>
+      <span class="marquee-pill"><span class="text-yellow-300">✦</span>CREATIVE</span>
+      <span class="marquee-pill"><span class="text-yellow-300">✦</span>SHOWCASE</span>
+      <span class="marquee-pill"><span class="text-yellow-300">✦</span>BEST WORK</span>
+      <span class="marquee-pill"><span class="text-yellow-300">✦</span>POSTED DAILY</span>
+      <span class="marquee-pill"><span class="text-yellow-300">✦</span>STUDENTS</span>
+    </div>
+    <div class="marquee-group" aria-hidden="true">
+      <span class="marquee-pill"><span class="text-yellow-300">✦</span>STUDENT PROJECTS</span>
+      <span class="marquee-pill"><span class="text-yellow-300">✦</span>POPULAR</span>
+      <span class="marquee-pill"><span class="text-yellow-300">✦</span>EXCELLENT WORK</span>
+      <span class="marquee-pill"><span class="text-yellow-300">✦</span>CREATIVE</span>
+      <span class="marquee-pill"><span class="text-yellow-300">✦</span>SHOWCASE</span>
+      <span class="marquee-pill"><span class="text-yellow-300">✦</span>BEST WORK</span>
+      <span class="marquee-pill"><span class="text-yellow-300">✦</span>POSTED DAILY</span>
+      <span class="marquee-pill"><span class="text-yellow-300">✦</span>STUDENTS</span>
+    </div>
+  </div>
+</div>
+<div class="sw">
+  <div class="sw-head">
+    <div class="sw-line"></div>
+    <span class="sw-title">Benefits for students</span>
+    <div class="sw-line"></div>
+  </div>
+  <div class="sw-layout">
+    
+    <div class="sw-img">
+      <div class="w-full mx-auto flex flex-col gap-6">
+        <img src="../image/Pair programming-amico.png">
       </div>
-      <div class="sw-layout">
-
-        <div class="sw-img">
-          <div class="w-full mx-auto flex flex-col gap-6">
-            <img
-              src="../image/Pair programming-amico.png" alt="Pair Programming">
-          </div>
-
-        </div>
-        <div class="sw-cards">
-          <div class="sc">
-            <div class="sc-icon">🌐</div>
-            <div class="sc-label">Publish &amp; portfolio</div>
-            <p class="sc-text">Publish projects online and build a professional portfolio to demonstrate your skills.
-            </p>
-          </div>
-          <div class="sc">
-            <div class="sc-icon">🔍</div>
-            <div class="sc-label">Explore &amp; inspire</div>
-            <p class="sc-text">Explore projects from different generations and gain new ideas and inspiration.</p>
-          </div>
-          <div class="sc">
-            <div class="sc-icon">📁</div>
-            <div class="sc-label">Upload &amp; organize</div>
-            <p class="sc-text">Upload, edit, and organize all your projects in one platform with ease.</p>
-          </div>
-          <div class="sc">
-            <div class="sc-icon">🚀</div>
-            <div class="sc-label">Grow your skills</div>
-            <p class="sc-text">Get feedback from peers and grow your skills with every project you share.</p>
-          </div>
-        </div>
-
+      
+    </div>
+    <div class="sw-cards">
+      <div class="sc">
+        <div class="sc-icon">🌐</div>
+        <div class="sc-label">Publish &amp; portfolio</div>
+        <p class="sc-text">Publish projects online and build a professional portfolio to demonstrate your skills.</p>
+      </div>
+      <div class="sc">
+        <div class="sc-icon">🔍</div>
+        <div class="sc-label">Explore &amp; inspire</div>
+        <p class="sc-text">Explore projects from different generations and gain new ideas and inspiration.</p>
+      </div>
+      <div class="sc">
+        <div class="sc-icon">📁</div>
+        <div class="sc-label">Upload &amp; organize</div>
+        <p class="sc-text">Upload, edit, and organize all your projects in one platform with ease.</p>
+      </div>
+      <div class="sc">
+        <div class="sc-icon">🚀</div>
+        <div class="sc-label">Grow your skills</div>
+        <p class="sc-text">Get feedback from peers and grow your skills with every project you share.</p>
       </div>
     </div>
-    <div class="bw">
-      <div class="bw-head">
-        <div class="bw-line"></div>
-        <span class="bw-title">Benefits for users</span>
-        <div class="bw-line"></div>
+      
+  </div>
+</div>
+  <div class="bw">
+  <div class="bw-head">
+    <div class="bw-line"></div>
+    <span class="bw-title">Benefits for users</span>
+    <div class="bw-line"></div>
+  </div>
+  <div class="bw-layout">
+    <div class="bw-cards">
+      <div class="bc">
+        <div class="bc-icon">📝</div>
+        <div class="bc-label">Review &amp; comment</div>
+        <p class="bc-text">Review projects and exchange ideas with peers through comments.</p>
       </div>
-      <div class="bw-layout">
-        <div class="bw-cards">
-          <div class="bc">
-            <div class="bc-icon">📝</div>
-            <div class="bc-label">Review &amp; comment</div>
-            <p class="bc-text">Review projects and exchange ideas with peers through comments.</p>
-          </div>
-          <div class="bc">
-            <div class="bc-icon">💡</div>
-            <div class="bc-label">Discover ideas</div>
-            <p class="bc-text">Explore creative and innovative projects from other students.</p>
-          </div>
-          <div class="bc">
-            <div class="bc-icon">🔍</div>
-            <div class="bc-label">Search &amp; filter</div>
-            <p class="bc-text">Find exactly what you need — search, browse, and filter fast.</p>
-          </div>
-          <div class="bc">
-            <div class="bc-icon">🤝</div>
-            <div class="bc-label">Collaborate</div>
-            <p class="bc-text">Connect with fellow students and build on each other's work.</p>
-          </div>
-        </div>
-        <div class="bw-im w-[300px] h-[300px] reveal-text1 ml-[500px]">
-          <img src="../image/users-benefit.svg" alt="" />
-        </div>
+      <div class="bc">
+        <div class="bc-icon">💡</div>
+        <div class="bc-label">Discover ideas</div>
+        <p class="bc-text">Explore creative and innovative projects from other students.</p>
+      </div>
+      <div class="bc">
+        <div class="bc-icon">🔍</div>
+        <div class="bc-label">Search &amp; filter</div>
+        <p class="bc-text">Find exactly what you need — search, browse, and filter fast.</p>
+      </div>
+      <div class="bc">
+        <div class="bc-icon">🤝</div>
+        <div class="bc-label">Collaborate</div>
+        <p class="bc-text">Connect with fellow students and build on each other's work.</p>
       </div>
     </div>
-  </section>
-  <div class="bg-white py-14">
+    <div class="bw-im w-[300px] h-[300px] reveal-text1 ml-[500px]">
+      <img src="../image/users-benefit.svg" alt="" />
+    </div>
+  </div>
+</div>
+</div>
+  </div>
+<div class="bg-white py-14">
     <div class="py-8 px-4 sm:px-6 lg:px-8">
-      <div class="max-w-2xl mx-auto text-center">
-        <div
-          class="inline-flex items-center gap-2 bg-purple-50 text-purple-700 text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-4">
-          ⭐ Student showcase
+        <div class="max-w-2xl mx-auto text-center">
+  <div class="inline-flex items-center gap-2 bg-purple-50 text-purple-700 text-xs font-bold tracking-widest uppercase px-4 py-1.5 rounded-full mb-4">
+    ⭐ Student showcase
+  </div>
+  <h1 class="text-2xl md:text-3xl font-black text-indigo-600 tracking-widest uppercase mb-3">
+    Popular projects
+  </h1>
+  <p class="text-sm md:text-base text-gray-400 max-w-md mx-auto leading-relaxed mb-3">
+    Discover top-rated projects built by students. Get inspired, leave feedback, and share your own work.
+  </p>
+</div>
+</div>
+</div>
+</section>
+     <div class="  grid px-4 sm:px-6 lg:px-8 pb-16">
+        <div class=" reveal-text mx-auto ">
+            <div id="popularProjectsGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="group h-full w-full">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm border border-slate-200 hover:shadow-md transition-all duration-300 h-full flex flex-col">
+                        <div class="relative overflow-hidden bg-slate-100 h-32">
+                            <img 
+                                src="../image/UXUI1.png" 
+                                alt="Web Development Project" 
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            />
+                        </div>
+                        <div class="p-3 flex-1 flex flex-col">
+                            <h3 class="text-sm font-semibold text-slate-900 mb-1">
+                                <span class="text-indigo-600">Bootstrap Framework</span> 
+                            </h3>
+                            <p class="text-xs text-slate-600 line-clamp-2 mb-3 flex-1">
+                                Create responsive and modern websites faster with Bootstrap's ready-to-use components and flexible grid system.
+                            </p>
+                            <div class="flex items-center gap-2 pt-2 border-t border-slate-100">
+                                <span class="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded-md bg-slate-900 text-white hover:bg-slate-800 transition-colors">
+                                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6.5 10.333c0-.53.22-1.036.6-1.408L11 5.5V3a1.5 1.5 0 013 0v3.586c0 .398-.158.78-.44 1.06L12.5 8.7h4.086a1.5 1.5 0 011.45 1.878l-1.2 4.5A1.5 1.5 0 0115.386 16H8a1.5 1.5 0 01-1.5-1.5v-4.167z"/>
+                                    </svg>
+                                    145
+                                </span>
+                                <span class="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors">
+                                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M5 3a2 2 0 00-2 2v14l7-5 7 5V5a2 2 0 00-2-2H5z"/>
+                                    </svg>
+                                    312
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group h-full w-full max-w-xs">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm border border-slate-200 hover:shadow-md transition-all duration-300 h-full flex flex-col">
+                        <div class="relative overflow-hidden bg-slate-100 h-32">
+                            <img 
+                                src="../image/internet.png" 
+                                alt="" 
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            />
+                        </div>
+                        <div class="p-3 flex-1 flex flex-col">
+                            <h3 class="text-sm font-semibold text-slate-900 mb-1">
+                                <span class="text-indigo-600">Internet Essentials</span> 
+                            </h3>
+                            <p class="text-xs text-slate-600 line-clamp-2 mb-3 flex-1">
+                                Understand how the internet works, including web browsers, websites, domains, hosting, HTTP/HTTPS, and online communication for modern web development.
+                            </p>
+                            <div class="flex items-center gap-2 pt-2 border-t border-slate-100">
+                                <span class="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded-md bg-slate-900 text-white hover:bg-slate-800 transition-colors">
+                                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6.5 10.333c0-.53.22-1.036.6-1.408L11 5.5V3a1.5 1.5 0 013 0v3.586c0 .398-.158.78-.44 1.06L12.5 8.7h4.086a1.5 1.5 0 011.45 1.878l-1.2 4.5A1.5 1.5 0 0115.386 16H8a1.5 1.5 0 01-1.5-1.5v-4.167z"/>
+                                    </svg>
+                                    298
+                                </span>
+                                <span class="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors">
+                                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M5 3a2 2 0 00-2 2v14l7-5 7 5V5a2 2 0 00-2-2H5z"/>
+                                    </svg>
+                                    456
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group h-full w-full max-w-xs">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm border border-slate-200 hover:shadow-md transition-all duration-300 h-full flex flex-col">
+                        <div class="relative overflow-hidden bg-slate-100 h-32">
+                            <img 
+                                src="../image/tailwind.jpeg" 
+                                alt="" 
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            />
+                        </div>
+                        <div class="p-3 flex-1 flex flex-col">
+                            <h3 class="text-sm font-semibold text-slate-900 mb-1">
+                                <span class="text-indigo-600">Tailwind CSS Framework</span>
+                            </h3>
+                            <p class="text-xs text-slate-600 line-clamp-2 mb-3 flex-1">
+                                Build responsive and professional user interfaces quickly using Tailwind CSS utility classes for faster and more efficient development.
+                            </p>
+                            <div class="flex items-center gap-2 pt-2 border-t border-slate-100">
+                                <span class="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded-md bg-slate-900 text-white hover:bg-slate-800 transition-colors">
+                                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6.5 10.333c0-.53.22-1.036.6-1.408L11 5.5V3a1.5 1.5 0 013 0v3.586c0 .398-.158.78-.44 1.06L12.5 8.7h4.086a1.5 1.5 0 011.45 1.878l-1.2 4.5A1.5 1.5 0 0115.386 16H8a1.5 1.5 0 01-1.5-1.5v-4.167z"/>
+                                    </svg>
+                                    521
+                                </span>
+                                <span class="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors">
+                                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M5 3a2 2 0 00-2 2v14l7-5 7 5V5a2 2 0 00-2-2H5z"/>
+                                    </svg>
+                                    678
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group h-full w-full max-w-xs">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm border border-slate-200 hover:shadow-md transition-all duration-300 h-full flex flex-col">
+                        <div class="relative overflow-hidden bg-slate-100 h-32">
+                            <img 
+                                src="../image/css.png" 
+                                alt="Tailwind CSS Course" 
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            />
+                        </div>
+                        <div class="p-3 flex-1 flex flex-col">
+                            <h3 class="text-sm font-semibold text-slate-900 mb-1">
+                                <span class="text-indigo-600">CSS Styling</span> 
+                            </h3>
+                            <p class="text-xs text-slate-600 line-clamp-2 mb-3 flex-1">
+                               Master CSS to design attractive, responsive, and modern websites with layouts, colors, typography, animations, and visual effects.
+                            </p>
+                            <div class="flex items-center gap-2 pt-2 border-t border-slate-100">
+                                <span class="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded-md bg-slate-900 text-white hover:bg-slate-800 transition-colors">
+                                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6.5 10.333c0-.53.22-1.036.6-1.408L11 5.5V3a1.5 1.5 0 013 0v3.586c0 .398-.158.78-.44 1.06L12.5 8.7h4.086a1.5 1.5 0 011.45 1.878l-1.2 4.5A1.5 1.5 0 0115.386 16H8a1.5 1.5 0 01-1.5-1.5v-4.167z"/>
+                                    </svg>
+                                    187
+                                </span>
+                                <span class="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors">
+                                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M5 3a2 2 0 00-2 2v14l7-5 7 5V5a2 2 0 00-2-2H5z"/>
+                                    </svg>
+                                    234
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group h-full w-full max-w-xs">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm border border-slate-200 hover:shadow-md transition-all duration-300 h-full flex flex-col">
+                        <div class="relative overflow-hidden bg-slate-100 h-32">
+                            <img 
+                                src="../image/JS.png" 
+                                alt="TypeScript Course" 
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            />
+                        </div>
+                        <div class="p-3 flex-1 flex flex-col">
+                            <h3 class="text-sm font-semibold text-slate-900 mb-1">
+                                <span class="text-indigo-600">JavaScript Programming</span> 
+                            </h3>
+                            <p class="text-xs text-slate-600 line-clamp-2 mb-3 flex-1">
+                               Explore JavaScript to create interactive web experiences, handle user events, manipulate the DOM, and build dynamic website features.
+                            </p>
+                            <div class="flex items-center gap-2 pt-2 border-t border-slate-100">
+                                <span class="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded-md bg-slate-900 text-white hover:bg-slate-800 transition-colors">
+                                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6.5 10.333c0-.53.22-1.036.6-1.408L11 5.5V3a1.5 1.5 0 013 0v3.586c0 .398-.158.78-.44 1.06L12.5 8.7h4.086a1.5 1.5 0 011.45 1.878l-1.2 4.5A1.5 1.5 0 0115.386 16H8a1.5 1.5 0 01-1.5-1.5v-4.167z"/>
+                                    </svg>
+                                    264
+                                </span>
+                                <span class="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors">
+                                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M5 3a2 2 0 00-2 2v14l7-5 7 5V5a2 2 0 00-2-2H5z"/>
+                                    </svg>
+                                    389
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="group h-full w-full max-w-xs">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm border border-slate-200 hover:shadow-md transition-all duration-300 h-full flex flex-col">
+                        <div class="relative overflow-hidden bg-slate-100 h-32">
+                            <img 
+                                src="../image/html.jpg" 
+                                alt="Performance Course" 
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            />
+                        </div>
+                        <div class="p-3 flex-1 flex flex-col">
+                            <h3 class="text-sm font-semibold text-slate-900 mb-1">
+                                <span class="text-indigo-600">HTML Fundamentals</span> 
+                            </h3>
+                            <p class="text-xs text-slate-600 line-clamp-2 mb-3 flex-1">
+                               Learn how to build the structure of web pages using HTML elements such as headings, paragraphs, images, links, forms, and tables.
+                            </p>
+                            <div class="flex items-center gap-2 pt-2 border-t border-slate-100">
+                                <span class="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded-md bg-slate-900 text-white hover:bg-slate-800 transition-colors">
+                                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6.5 10.333c0-.53.22-1.036.6-1.408L11 5.5V3a1.5 1.5 0 013 0v3.586c0 .398-.158.78-.44 1.06L12.5 8.7h4.086a1.5 1.5 0 011.45 1.878l-1.2 4.5A1.5 1.5 0 0115.386 16H8a1.5 1.5 0 01-1.5-1.5v-4.167z"/>
+                                    </svg>
+                                    412
+                                </span>
+                                <span class="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors">
+                                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M5 3a2 2 0 00-2 2v14l7-5 7 5V5a2 2 0 00-2-2H5z"/>
+                                    </svg>
+                                    567
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <h1 class="text-2xl md:text-3xl font-black text-indigo-600 tracking-widest uppercase mb-3">
-          Popular projects
-        </h1>
-        <p class="text-sm md:text-base text-gray-400 max-w-md mx-auto leading-relaxed mb-3">
-          Discover top-rated projects built by students. Get inspired, leave feedback, and share your own work.
-        </p>
+    </div>
+    <div class="flex justify-center">
+     <a href="./projects.html" class="reveal-text1  bg-[#564CE5] hover:bg-yellow-600 text-white  font-bold text-sm md:text-base px-8 py-3.5 rounded-lg shadow-md hover:shadow-lg  cursor-pointer inline-block">
+        View More
+      </a>
+    </div>
+    <br>
+    <div class="py-8 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-xl mx-auto text-center">
+            <h4 class="text-[30px] md:text-[30px] font-bold text-blue-600 mb-4 tracking-tight">
+               Discover, Share, and Get Inspired
+            </h4>
+            <p class="text-[16px] md:text-[16px] text-black-600 leading-relaxed max-w-xl mx-auto ">
+                Explore innovative student projects, discover creative ideas, and share your own work with the STADIA community. Learn from others, showcase your skills, and inspire the next generation of developers and designers.
+            </p>
+        </div>
+    </div>
+ <div class="reveal-img2 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="relative">
+    <div id="reviewsCarousel" class="flex gap-5 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-2 scrollbar-hide"></div>
+    
+  </div>
+  <div id="reviewsEmpty" class="hidden text-center text-gray-400 text-sm py-8">No reviews yet. Be the first to review a project!</div>
+
+  <template id="reviewCardTemplate">
+    <div class="review-card shrink-0 snap-start w-[280px] sm:w-[320px] bg-white border border-gray-200 rounded-lg shadow p-5">
+      <div class="review-stars flex text-amber-400 gap-0.5 mb-3"></div>
+      <p class="review-text mb-4 text-[14px] font-normal text-gray-700 leading-relaxed min-h-[66px] line-clamp-3"></p>
+      <div class="flex items-center gap-2.5">
+        <div class="review-avatar w-10 h-10 rounded-full overflow-hidden bg-gray-300 flex items-center justify-center font-bold text-sm text-white shrink-0"></div>
+        <div class="min-w-0">
+          <b class="review-author block text-[13.5px] truncate"></b>
+          <a class="review-project block text-[12px] text-secondary2 hover:underline truncate"></a>
+        </div>
       </div>
     </div>
+  </template>
   </div>
-  <div class=" reveal-text grid col-3 px-4 sm:px-6 lg:px-8 pb-16">
-    <div class=" reveal-text mx-auto ">
-      <div id="popularProjectsGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
-        <div class="group h-full w-full">
-          <div
-            class="bg-white rounded-lg overflow-hidden shadow-sm border border-slate-200 hover:shadow-md transition-all duration-300 h-full flex flex-col">
-            <div class="relative overflow-hidden bg-slate-100 h-32">
-              <img src="../image/UXUI1.png" alt="Web Development Project"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-            </div>
-            <div class="p-3 flex-1 flex flex-col">
-              <h3 class="text-sm font-semibold text-slate-900 mb-1">
-                <span class="text-indigo-600">Bootstrap Framework</span>
-              </h3>
-              <p class="text-xs text-slate-600 line-clamp-2 mb-3 flex-1">
-                Create responsive and modern websites faster with Bootstrap's ready-to-use components and flexible grid
-                system.
-              </p>
-              <div class="flex items-center gap-2 pt-2 border-t border-slate-100">
-                <span
-                  class="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded-md bg-slate-900 text-white hover:bg-slate-800 transition-colors">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6.5 10.333c0-.53.22-1.036.6-1.408L11 5.5V3a1.5 1.5 0 013 0v3.586c0 .398-.158.78-.44 1.06L12.5 8.7h4.086a1.5 1.5 0 011.45 1.878l-1.2 4.5A1.5 1.5 0 0115.386 16H8a1.5 1.5 0 01-1.5-1.5v-4.167z" />
-                  </svg>
-                  145
-                </span>
-                <span
-                  class="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M5 3a2 2 0 00-2 2v14l7-5 7 5V5a2 2 0 00-2-2H5z" />
-                  </svg>
-                  312
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="group h-full w-full max-w-xs">
-          <div
-            class="bg-white rounded-lg overflow-hidden shadow-sm border border-slate-200 hover:shadow-md transition-all duration-300 h-full flex flex-col">
-            <div class="relative overflow-hidden bg-slate-100 h-32">
-              <img src="../image/internet.png" alt=""
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-            </div>
-            <div class="p-3 flex-1 flex flex-col">
-              <h3 class="text-sm font-semibold text-slate-900 mb-1">
-                <span class="text-indigo-600">Internet Essentials</span>
-              </h3>
-              <p class="text-xs text-slate-600 line-clamp-2 mb-3 flex-1">
-                Understand how the internet works, including web browsers, websites, domains, hosting, HTTP/HTTPS, and
-                online communication for modern web development.
-              </p>
-              <div class="flex items-center gap-2 pt-2 border-t border-slate-100">
-                <span
-                  class="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded-md bg-slate-900 text-white hover:bg-slate-800 transition-colors">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6.5 10.333c0-.53.22-1.036.6-1.408L11 5.5V3a1.5 1.5 0 013 0v3.586c0 .398-.158.78-.44 1.06L12.5 8.7h4.086a1.5 1.5 0 011.45 1.878l-1.2 4.5A1.5 1.5 0 0115.386 16H8a1.5 1.5 0 01-1.5-1.5v-4.167z" />
-                  </svg>
-                  298
-                </span>
-                <span
-                  class="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M5 3a2 2 0 00-2 2v14l7-5 7 5V5a2 2 0 00-2-2H5z" />
-                  </svg>
-                  456
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="group h-full w-full max-w-xs">
-          <div
-            class="bg-white rounded-lg overflow-hidden shadow-sm border border-slate-200 hover:shadow-md transition-all duration-300 h-full flex flex-col">
-            <div class="relative overflow-hidden bg-slate-100 h-32">
-              <img src="../image/tailwind.jpeg" alt=""
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-            </div>
-            <div class="p-3 flex-1 flex flex-col">
-              <h3 class="text-sm font-semibold text-slate-900 mb-1">
-                <span class="text-indigo-600">Tailwind CSS Framework</span>
-              </h3>
-              <p class="text-xs text-slate-600 line-clamp-2 mb-3 flex-1">
-                Build responsive and professional user interfaces quickly using Tailwind CSS utility classes for faster
-                and more efficient development.
-              </p>
-              <div class="flex items-center gap-2 pt-2 border-t border-slate-100">
-                <span
-                  class="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded-md bg-slate-900 text-white hover:bg-slate-800 transition-colors">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6.5 10.333c0-.53.22-1.036.6-1.408L11 5.5V3a1.5 1.5 0 013 0v3.586c0 .398-.158.78-.44 1.06L12.5 8.7h4.086a1.5 1.5 0 011.45 1.878l-1.2 4.5A1.5 1.5 0 0115.386 16H8a1.5 1.5 0 01-1.5-1.5v-4.167z" />
-                  </svg>
-                  521
-                </span>
-                <span
-                  class="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M5 3a2 2 0 00-2 2v14l7-5 7 5V5a2 2 0 00-2-2H5z" />
-                  </svg>
-                  678
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="group h-full w-full max-w-xs">
-          <div
-            class="bg-white rounded-lg overflow-hidden shadow-sm border border-slate-200 hover:shadow-md transition-all duration-300 h-full flex flex-col">
-            <div class="relative overflow-hidden bg-slate-100 h-32">
-              <img src="../image/css.png" alt="Tailwind CSS Course"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-            </div>
-            <div class="p-3 flex-1 flex flex-col">
-              <h3 class="text-sm font-semibold text-slate-900 mb-1">
-                <span class="text-indigo-600">CSS Styling</span>
-              </h3>
-              <p class="text-xs text-slate-600 line-clamp-2 mb-3 flex-1">
-                Master CSS to design attractive, responsive, and modern websites with layouts, colors, typography,
-                animations, and visual effects.
-              </p>
-              <div class="flex items-center gap-2 pt-2 border-t border-slate-100">
-                <span
-                  class="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded-md bg-slate-900 text-white hover:bg-slate-800 transition-colors">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6.5 10.333c0-.53.22-1.036.6-1.408L11 5.5V3a1.5 1.5 0 013 0v3.586c0 .398-.158.78-.44 1.06L12.5 8.7h4.086a1.5 1.5 0 011.45 1.878l-1.2 4.5A1.5 1.5 0 0115.386 16H8a1.5 1.5 0 01-1.5-1.5v-4.167z" />
-                  </svg>
-                  187
-                </span>
-                <span
-                  class="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M5 3a2 2 0 00-2 2v14l7-5 7 5V5a2 2 0 00-2-2H5z" />
-                  </svg>
-                  234
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
+</section>
 
-
-        <div class="group h-full w-full max-w-xs">
-          <div
-            class="bg-white rounded-lg overflow-hidden shadow-sm border border-slate-200 hover:shadow-md transition-all duration-300 h-full flex flex-col">
-            <div class="relative overflow-hidden bg-slate-100 h-32">
-              <img src="../image/JS.png" alt="TypeScript Course"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-            </div>
-            <div class="p-3 flex-1 flex flex-col">
-              <h3 class="text-sm font-semibold text-slate-900 mb-1">
-                <span class="text-indigo-600">JavaScript Programming</span>
-              </h3>
-              <p class="text-xs text-slate-600 line-clamp-2 mb-3 flex-1">
-                Explore JavaScript to create interactive web experiences, handle user events, manipulate the DOM, and
-                build dynamic website features.
-              </p>
-              <div class="flex items-center gap-2 pt-2 border-t border-slate-100">
-                <span
-                  class="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded-md bg-slate-900 text-white hover:bg-slate-800 transition-colors">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6.5 10.333c0-.53.22-1.036.6-1.408L11 5.5V3a1.5 1.5 0 013 0v3.586c0 .398-.158.78-.44 1.06L12.5 8.7h4.086a1.5 1.5 0 011.45 1.878l-1.2 4.5A1.5 1.5 0 0115.386 16H8a1.5 1.5 0 01-1.5-1.5v-4.167z" />
-                  </svg>
-                  264
-                </span>
-                <span
-                  class="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M5 3a2 2 0 00-2 2v14l7-5 7 5V5a2 2 0 00-2-2H5z" />
-                  </svg>
-                  389
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="group h-full w-full max-w-xs">
-          <div
-            class="bg-white rounded-lg overflow-hidden shadow-sm border border-slate-200 hover:shadow-md transition-all duration-300 h-full flex flex-col">
-            <div class="relative overflow-hidden bg-slate-100 h-32">
-              <img src="../image/html.jpg" alt="Performance Course"
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-            </div>
-            <div class="p-3 flex-1 flex flex-col">
-              <h3 class="text-sm font-semibold text-slate-900 mb-1">
-                <span class="text-indigo-600">HTML Fundamentals</span>
-              </h3>
-              <p class="text-xs text-slate-600 line-clamp-2 mb-3 flex-1">
-                Learn how to build the structure of web pages using HTML elements such as headings, paragraphs, images,
-                links, forms, and tables.
-              </p>
-              <div class="flex items-center gap-2 pt-2 border-t border-slate-100">
-                <span
-                  class="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded-md bg-slate-900 text-white hover:bg-slate-800 transition-colors">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path
-                      d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6.5 10.333c0-.53.22-1.036.6-1.408L11 5.5V3a1.5 1.5 0 013 0v3.586c0 .398-.158.78-.44 1.06L12.5 8.7h4.086a1.5 1.5 0 011.45 1.878l-1.2 4.5A1.5 1.5 0 0115.386 16H8a1.5 1.5 0 01-1.5-1.5v-4.167z" />
-                  </svg>
-                  412
-                </span>
-                <span
-                  class="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded-md bg-slate-100 text-slate-700 hover:bg-slate-200 transition-colors">
-                  <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M5 3a2 2 0 00-2 2v14l7-5 7 5V5a2 2 0 00-2-2H5z" />
-                  </svg>
-                  567
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
+<div class="   reveal-text2 max-w-7xl mx-auto px-6 py-5 mb-6">
+  <div class="bg-[#564CE5] rounded-2xl px-8 py-10 md:px-11 md:py-10 flex flex-col md:flex-row items-center justify-between gap-6"
+       style="background-image: radial-gradient(circle at 90% 20%, rgba(255,255,255,.08), transparent 60%);">
+    <div class="">
+      <h4 class="text-white text-2xl font-extrabold leading-snug">Ready to start your Learning journey?</h4>
+      <p class="text-indigo-100 text-sm mt-2">Join thousands of students building real skills with STADIA today.</p>
     </div>
-  </div>
-  <div class="flex justify-center">
-    <a href="./projects.html"
-      class="reveal-text1  bg-[#564CE5] hover:bg-yellow-600 text-white  font-bold text-sm md:text-base px-8 py-3.5 rounded-lg shadow-md hover:shadow-lg  cursor-pointer inline-block">
-      View More
+    <a href="./SignUp.html" class="inline-block bg-[#FFFF00] text-[#2b2a3a] font-bold text-sm px-7 py-3 rounded-full whitespace-nowrap">
+      Get start for free
     </a>
   </div>
-  <br>
-  <div class="py-8 px-4 sm:px-6 lg:px-8">
-    <div class="max-w-xl mx-auto text-center">
-      <h4 class="text-[30px] md:text-[30px] font-bold text-blue-600 mb-4 tracking-tight">
-        What our Student say
-      </h4>
-      <p class="text-[18px] md:text-[18px] text-gray-600 leading-relaxed max-w-xl mx-auto ">
-        Master essential frontend technologies and frameworks to build modern,
-        responsive web applications with clean and efficient code.
-      </p>
+</div>
+<div class="marquee-wrap bg-[#564CE5] py-3">
+  <div class="marquee-track">
+    <div class="marquee-group">
+      <span class="marquee-pill"><span class="text-yellow-300">✦</span>STUDENT PROJECTS</span>
+      <span class="marquee-pill"><span class="text-yellow-300">✦</span>POPULAR</span>
+      <span class="marquee-pill"><span class="text-yellow-300">✦</span>EXCELLENT WORK</span>
+      <span class="marquee-pill"><span class="text-yellow-300">✦</span>CREATIVE</span>
+      <span class="marquee-pill"><span class="text-yellow-300">✦</span>SHOWCASE</span>
+      <span class="marquee-pill"><span class="text-yellow-300">✦</span>BEST WORK</span>
+      <span class="marquee-pill"><span class="text-yellow-300">✦</span>POSTED DAILY</span>
+      <span class="marquee-pill"><span class="text-yellow-300">✦</span>STUDENTS</span>
+    </div>
+    <div class="marquee-group" aria-hidden="true">
+      <span class="marquee-pill"><span class="text-yellow-300">✦</span>STUDENT PROJECTS</span>
+      <span class="marquee-pill"><span class="text-yellow-300">✦</span>POPULAR</span>
+      <span class="marquee-pill"><span class="text-yellow-300">✦</span>EXCELLENT WORK</span>
+      <span class="marquee-pill"><span class="text-yellow-300">✦</span>CREATIVE</span>
+      <span class="marquee-pill"><span class="text-yellow-300">✦</span>SHOWCASE</span>
+      <span class="marquee-pill"><span class="text-yellow-300">✦</span>BEST WORK</span>
+      <span class="marquee-pill"><span class="text-yellow-300">✦</span>POSTED DAILY</span>
+      <span class="marquee-pill"><span class="text-yellow-300">✦</span>STUDENTS</span>
     </div>
   </div>
-  <div class="reveal-img2 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div id="reviewsEmpty" class="hidden text-center text-gray-400 text-sm py-8">No reviews yet. Be the first to review
-      a project!</div>
-
-    <template id="reviewCardTemplate">
-      <div
-        class="review-card shrink-0 snap-start w-[280px] sm:w-[320px] bg-white border border-gray-200 rounded-lg shadow p-5">
-        <div class="review-stars flex text-amber-400 gap-0.5 mb-3"></div>
-        <p class="review-text mb-4 text-[18px] font-normal text-gray-700 leading-relaxed min-h-[66px] line-clamp-3"></p>
-        <div class="flex items-center gap-2.5">
-          <div
-            class="review-avatar w-10 h-10 rounded-full overflow-hidden bg-gray-300 flex items-center justify-center font-bold text-sm text-white shrink-0">
+</div>
+</div>
+<footer class="bg-[#f5f5f7] px-6">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-8 py-10">
+    <div>
+      <div class="flex items-center gap-2 font-extrabold text-navy">
+        <img src="../image/stadia-logo-transparent.png" alt="" class="w-40 ">
+      </div>
+    </div>
+    <div>
+      <h5 class="font-extrabold text-sm mb-3">EXPLORE</h5>
+      <ul class="space-y-2 text-[13.5px] text-gray-500">
+        <li><a href="./index.html" class="hover:text-navy">Home</a></li>
+        <li><a href="./about-us.html" class="hover:text-navy">About Us</a></li>
+        <li><a href="./projects.html" class="hover:text-navy">List project</a></li>
+        <li><a href="./create-project.html" data-requires-auth class="hover:text-navy">Post project</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5 class="font-extrabold text-sm mb-3">Connect With Us</h5>
+      <p class="text-[13.5px] text-gray-500 mb-3">Stay updated with our latest news and events.</p>
+      <div class="flex gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="30" height="30"><path fill="rgb(8, 6, 26)" d="M576 320C576 178.6 461.4 64 320 64C178.6 64 64 178.6 64 320C64 440 146.7 540.8 258.2 568.5L258.2 398.2L205.4 398.2L205.4 320L258.2 320L258.2 286.3C258.2 199.2 297.6 158.8 383.2 158.8C399.4 158.8 427.4 162 438.9 165.2L438.9 236C432.9 235.4 422.4 235 409.3 235C367.3 235 351.1 250.9 351.1 292.2L351.1 320L434.7 320L420.3 398.2L351 398.2L351 574.1C477.8 558.8 576 450.9 576 320z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="30" height="30"><path fill="rgb(8, 6, 26)" d="M320 72C183 72 72 183 72 320C72 457 183 568 320 568C457 568 568 457 568 320C568 183 457 72 320 72zM435 240.7C431.3 279.9 415.1 375.1 406.9 419C403.4 437.6 396.6 443.8 390 444.4C375.6 445.7 364.7 434.9 350.7 425.7C328.9 411.4 316.5 402.5 295.4 388.5C270.9 372.4 286.8 363.5 300.7 349C304.4 345.2 367.8 287.5 369 282.3C369.2 281.6 369.3 279.2 367.8 277.9C366.3 276.6 364.2 277.1 362.7 277.4C360.5 277.9 325.6 300.9 258.1 346.5C248.2 353.3 239.2 356.6 231.2 356.4C222.3 356.2 205.3 351.4 192.6 347.3C177.1 342.3 164.7 339.6 165.8 331C166.4 326.5 172.5 322 184.2 317.3C256.5 285.8 304.7 265 328.8 255C397.7 226.4 412 221.4 421.3 221.2C423.4 221.2 427.9 221.7 430.9 224.1C432.9 225.8 434.1 228.2 434.4 230.8C434.9 234 435 237.3 434.8 240.6z"/>
+            </svg>
+             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="30" height="30"><path fill="rgb(8, 6, 26)" d="M280.5 426.5C214.5 418.5 168 371 168 309.5C168 284.5 177 257.5 192 239.5C185.5 223 186.5 188 194 173.5C214 171 241 181.5 257 196C276 190 296 187 320.5 187C345 187 365 190 383 195.5C398.5 181.5 426 171 446 173.5C453 187 454 222 447.5 239C463.5 258 472 283.5 472 309.5C472 371 425.5 417.5 358.5 426C375.5 437 387 461 387 488.5L387 540.5C387 555.5 399.5 564 414.5 558C505 523.5 576 433 576 321C576 179.5 461 64 319.5 64C178 64 64 179.5 64 321C64 432 134.5 524 229.5 558.5C243 563.5 256 554.5 256 541L256 501C249 504 240 506 232 506C199 506 179.5 488 165.5 454.5C160 441 154 433 142.5 431.5C136.5 431 134.5 428.5 134.5 425.5C134.5 419.5 144.5 415 154.5 415C169 415 181.5 424 194.5 442.5C204.5 457 215 463.5 227.5 463.5C240 463.5 248 459 259.5 447.5C268 439 274.5 431.5 280.5 426.5z"/>
+            </svg> 
           </div>
-          <div class="min-w-0">
-            <b class="review-author block text-[18px] truncate"></b>
-            <a class="review-project block text-[18px] text-secondary2 hover:underline truncate"></a>
-          </div>
-        </div>
-      </div>
-    </template>
-  </div>
-  </section>
-
-  <div class="   reveal-text2 max-w-7xl mx-auto px-6 py-5 mb-6">
-    <div
-      class="bg-[#564CE5] rounded-2xl px-8 py-10 md:px-11 md:py-10 flex flex-col md:flex-row items-center justify-between gap-6"
-      style="background-image: radial-gradient(circle at 90% 20%, rgba(255,255,255,.08), transparent 60%);">
-      <div class="">
-        <h4 class="text-white text-2xl font-extrabold leading-snug">Ready to start your Learning journey?</h4>
-        <p class="text-indigo-100 text-sm mt-2">Join thousands of students building real skills with STADIA today.</p>
-      </div>
-      <a href="./SignUp.html"
-        class="inline-block bg-[#FFFF00] text-[#2b2a3a] font-bold text-sm px-7 py-3 rounded-full whitespace-nowrap">
-        Get start for free
-      </a>
     </div>
-  </div>
-  <div class="marquee-wrap bg-[#564CE5] py-3">
-    <div class="marquee-track">
-      <div class="marquee-group">
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>STUDENT PROJECTS</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>POPULAR</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>EXCELLENT WORK</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>CREATIVE</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>SHOWCASE</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>BEST WORK</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>POSTED DAILY</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>STUDENTS</span>
-      </div>
-      <div class="marquee-group" aria-hidden="true">
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>STUDENT PROJECTS</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>POPULAR</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>EXCELLENT WORK</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>CREATIVE</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>SHOWCASE</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>BEST WORK</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>POSTED DAILY</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>STUDENTS</span>
-      </div>
-      <div class="marquee-group" aria-hidden="true">
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>STUDENT PROJECTS</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>POPULAR</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>EXCELLENT WORK</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>CREATIVE</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>SHOWCASE</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>BEST WORK</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>POSTED DAILY</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>STUDENTS</span>
-      </div>
-      <div class="marquee-group" aria-hidden="true">
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>STUDENT PROJECTS</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>POPULAR</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>EXCELLENT WORK</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>CREATIVE</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>SHOWCASE</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>BEST WORK</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>POSTED DAILY</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>STUDENTS</span>
-      </div>
-      <div class="marquee-group" aria-hidden="true">
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>STUDENT PROJECTS</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>POPULAR</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>EXCELLENT WORK</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>CREATIVE</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>SHOWCASE</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>BEST WORK</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>POSTED DAILY</span>
-        <span class="marquee-pill"><span class="text-yellow-300">✦</span>STUDENTS</span>
+    <div>
+      <h5 class="font-extrabold text-sm mb-3">Sponsored and organized by ISTAD</h5>
+      <div >
+        <img src="../image/New Logo iSTAD Full-12.png" alt="" class="w-48">
       </div>
     </div>
   </div>
-  </div>
-  <footer class="bg-[#f5f5f7] px-6">
-    <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-8 py-10">
-      <div>
-        <div class="flex items-center gap-2 font-extrabold text-navy">
-          <img src="../image/stadia-logo-transparent.png" alt="" class="w-40 ">
-        </div>
-      </div>
-      <div>
-        <h5 class="font-extrabold text-sm mb-3">EXPLORE</h5>
-        <ul class="space-y-2 text-[13.5px] text-gray-500">
-          <li><a href="./index.html" class="hover:text-navy">Home</a></li>
-          <li><a href="./about-us.html" class="hover:text-navy">About Us</a></li>
-          <li><a href="./projects.html" class="hover:text-navy">List project</a></li>
-          <li><a href="./create-project.html" data-requires-auth class="hover:text-navy">Post project</a></li>
-        </ul>
-      </div>
-      <div>
-        <h5 class="font-extrabold text-sm mb-3">Connect With Us</h5>
-        <p class="text-[13.5px] text-gray-500 mb-3">Stay updated with our latest news and events.</p>
-        <div class="flex gap-2 ">
-          <div><i class="fa-brands fa-facebook text-lg dark:text-white"></i></div>
-          <div><i class="fa-brands fa-telegram text-lg dark:text-white"></i></div>
-          <div><i class="fa-brands fa-youtube text-lg dark:text-white"></i></div>
-        </div>
-      </div>
-      <div>
-        <h5 class="font-extrabold text-sm mb-3">Sponsored and organized by ISTAD</h5>
-        <div>
-          <img src="../image/New Logo iSTAD Full-12.png" alt="" class="w-48">
-        </div>
-      </div>
-    </div>
-    <b>
-      <div class=" text-center  tmax-w-7xl mx-auto border-t border-gray-200 py-5 text-[15px] text-gray-500">
-        © 2026 &nbsp; STADIA is a platform where ISTAD students inspire the next generation through their projects.
-      </div>
-    </b>
-  </footer>
-  <script src="../vendor/flowbite/flowbite.min.js"> </script>
-  <script src="../vendor/preline/preline.js"></script>
-  <!-- STADIA API wiring -->
-  <script src="../vendor/multiavatar/multiavatar.min.js"></script>
-  <script src="../vendor/aos/aos.js"></script>
-  <noscript>
-    <style>
-      [data-aos] {
-        opacity: 1 !important;
-        transform: none !important;
-      }
-    </style>
-  </noscript>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      if (window.AOS) AOS.init({ once: true, duration: 700, offset: 80, easing: 'ease-out-cubic' });
-      setTimeout(() => {
-        document.querySelectorAll('[data-aos]:not(.aos-animate)').forEach(el => {
-          el.style.opacity = '1';
-          el.style.transform = 'none';
-        });
-      }, 2000);
-    });
-  </script>
-  <script src="../js/theme.js"></script>
-  <script src="../js/config.js"></script>
-  <script src="../js/auth.js"></script>
-  <script src="../js/users.js"></script>
-  <script src="../js/media.js"></script>
-  <script src="../js/project.js"></script>
-  <script src="../js/reviews.js"></script>
-  <script src="../js/cardDetail.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      if (window.AuthAPI) AuthAPI.initNavAuth();
-      const grid = document.getElementById('popularProjectsGrid');
-      if (!grid || !window.ProjectsAPI) return;
-      cardDetailAPI.showLoading(grid, 8);
-      ProjectsAPI.getAllProjects({ page: 1, size: 20 })
-        .then(projects => {
-          const published = (Array.isArray(projects) ? projects : [])
-            .filter(p => p.status === 'published')
-            .sort((a, b) => {
-              const featuredDiff = (b.featured === true) - (a.featured === true);
-              if (featuredDiff !== 0) return featuredDiff;
-              return new Date(b.created_at || 0) - new Date(a.created_at || 0);
-            })
-            .slice(0, 8);
-          if (published.length === 0) {
-            grid.innerHTML = '<div class="col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-4 text-center text-gray-500 py-10">No projects have been published yet. Be the first to share your work!</div>';
-            return;
-          }
-          cardDetailAPI.renderProjectCards(published, grid);
-        })
-        .catch(err => {
-          console.error(err);
-          cardDetailAPI.showError(grid, 'Failed to load projects.');
-        });
-    });
-  </script>
+  <b><div class=" text-center  tmax-w-7xl mx-auto border-t border-gray-200 py-5 text-[13px] text-gray-500">
+    © 2026 &nbsp; STADIA is a platform where ISTAD students inspire the next generation through their projects.
+  </div></b>
+</footer>
+        <script src="../vendor/flowbite/flowbite.min.js"> </script>
+    <script src="../vendor/preline/preline.js"></script>
+       
+    <script src="../vendor/multiavatar/multiavatar.min.js"></script>
+    <script src="../vendor/aos/aos.js"></script>
+    <noscript><style>[data-aos]{opacity:1 !important;transform:none !important;}</style></noscript>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.AOS) AOS.init({ once: true, duration: 700, offset: 80, easing: 'ease-out-cubic' });
+    setTimeout(() => {
+      document.querySelectorAll('[data-aos]:not(.aos-animate)').forEach(el => {
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+      });
+    }, 2000);
+  });
+</script>
+    <script src="../js/theme.js"></script>
+    <script src="../js/config.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/users.js"></script>
+    <script src="../js/media.js"></script>
+    <script src="../js/project.js"></script>
+    <script src="../js/reviews.js"></script>
+    <script src="../js/cardDetail.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        if (window.AuthAPI) AuthAPI.initNavAuth();
+        const grid = document.getElementById('popularProjectsGrid');
+        if (!grid || !window.ProjectsAPI) return;
+        cardDetailAPI.showLoading(grid, 8);
+        ProjectsAPI.getAllProjects({ page: 1, size: 20 })
+          .then(projects => {
+            const published = (Array.isArray(projects) ? projects : [])
+              .filter(p => p.status === 'published')
+              .sort((a, b) => {
+                const featuredDiff = (b.featured === true) - (a.featured === true);
+                if (featuredDiff !== 0) return featuredDiff;
+                return new Date(b.created_at || 0) - new Date(a.created_at || 0);
+              })
+              .slice(0, 8);
+            if (published.length === 0) {
+              grid.innerHTML = '<div class="col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-4 text-center text-gray-500 py-10">No projects have been published yet. Be the first to share your work!</div>';
+              return;
+            }
+            cardDetailAPI.renderProjectCards(published, grid);
+          })
+          .catch(err => {
+            console.error(err);
+            cardDetailAPI.showError(grid, 'Failed to load projects.');
+          });
+      });
+    </script>
 </body>
-
 </html>

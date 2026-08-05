@@ -5044,3 +5044,5 @@ html {
     }
   }
 }
+ .dark .bg-\[\#f5f5f7\] { background-color: #131419; }
+.dark footer svg path { fill: #e5e7eb !important; }
