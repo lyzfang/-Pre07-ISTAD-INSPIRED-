@@ -1,4 +1,4 @@
-// ============================================
+﻿// ============================================
 // Favorites + View History - client-side only, backed by localStorage.
 // There is no favorites/history endpoint on the STADIA API, so bookmarking
 // a project and tracking recently-viewed projects are tracked entirely in

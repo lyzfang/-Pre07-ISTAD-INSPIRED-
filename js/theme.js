@@ -1,4 +1,4 @@
-// ============================================
+﻿// ============================================
 // Dark / light mode toggle, shared across every page.
 // Preference is saved to localStorage and falls back to the OS/browser
 // preference on first visit. Each page also carries a tiny inline snippet

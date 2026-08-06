@@ -1,4 +1,4 @@
-// ============================================
+﻿// ============================================
 // Card Detail API - Coordinates data loading for
 // individual project/card detail pages
 // ============================================

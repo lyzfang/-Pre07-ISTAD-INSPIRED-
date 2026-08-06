@@ -1,4 +1,4 @@
-// ============================================
+﻿// ============================================
 // Projects API - Project management
 // Endpoints:
 //   GET    /api/v1/projects

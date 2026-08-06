@@ -1,4 +1,4 @@
-
+﻿
 (function () {
 
 class CategoriesAPI {

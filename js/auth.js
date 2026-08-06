@@ -1,4 +1,4 @@
-// ============================================
+﻿// ============================================
 // Auth API - Handles login, register, token refresh
 // Endpoints used:
 //   POST /api/v1/auth/login
@@ -103,7 +103,7 @@ class AuthAPI {
      */
     logout() {
         this.client.logout();
-        window.location.href = './index.html';
+        window.location.href = '/index.html';
     }
 
     /**
@@ -235,7 +235,7 @@ class AuthAPI {
      */
     redirectToLogin(returnPath) {
         const target = returnPath || (window.location.pathname.split('/').pop() + window.location.search);
-        window.location.href = './login.html?redirect=' + encodeURIComponent(target);
+        window.location.href = '/login.html?redirect=' + encodeURIComponent(target);
     }
 }
 

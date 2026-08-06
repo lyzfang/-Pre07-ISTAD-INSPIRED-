@@ -1,4 +1,4 @@
-// ============================================
+﻿// ============================================
 // Media API - File upload and serving
 // Endpoints:
 //   POST /api/v1/media  (upload file)

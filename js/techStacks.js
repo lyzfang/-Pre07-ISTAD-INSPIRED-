@@ -1,4 +1,4 @@
-// ============================================
+﻿// ============================================
 // Tech Stacks API - Tech stack management
 // Endpoints:
 //   GET  /api/v1/tech-stacks

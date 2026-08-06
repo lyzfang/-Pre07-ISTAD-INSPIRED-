@@ -1,4 +1,4 @@
-// ============================================
+﻿// ============================================
 // Generations API - Generation management
 // Endpoints:
 //   GET  /api/v1/generations

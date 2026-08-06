@@ -1,4 +1,4 @@
-// ============================================
+﻿// ============================================
 // STADIA API Configuration File
 // Base URL: https://inspire-api.gital.me
 // ============================================
@@ -212,7 +212,7 @@ class APIClient {
             if (window.AuthAPI && typeof window.AuthAPI.redirectToLogin === 'function') {
                 window.AuthAPI.redirectToLogin(window.location.pathname.split('/').pop() + window.location.search);
             } else {
-                window.location.href = './login.html';
+                window.location.href = '/login.html';
             }
         }, 900);
     }
