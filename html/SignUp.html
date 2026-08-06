@@ -321,7 +321,7 @@
             if (window.ApiUtils) ApiUtils.showSuccess('Account created! Please sign in.');
             // Registration succeeded but does NOT auto-login (see auth.js) --
             // send the user to the Login page to sign in with their new account.
-            const signupUrl = './signup.html?registered=1' +
+            const signupUrl = './Signup.html?registered=1' +
               (redirectParam ? '&redirect=' + encodeURIComponent(redirectParam) : '');
             window.location.href = signupUrl;
           } catch (err) {
