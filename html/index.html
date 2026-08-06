@@ -268,7 +268,7 @@
       <div class="hidden md:flex items-center gap-3">
         <div data-auth="guest" class="flex items-center gap-2">
           <a href="./login.html" class="px-4 py-2 rounded-full text-sm font-semibold text-gray-500 hover:text-navy">Sign In</a>
-          <a href="./signup.html" class="px-4 py-2 rounded-full text-sm font-semibold bg-[#2b2a3a] text-white hover:bg-black">Sign Up</a>
+          <a href="signup.html" class="px-4 py-2 rounded-full text-sm font-semibold bg-[#2b2a3a] text-white hover:bg-black">Sign Up</a>
         </div>
         <div data-auth="user" class="hidden flex items-center gap-2">
           <a href="./dashboard.html" class="flex items-center gap-2 pl-1.5 pr-3 py-1.5 rounded-full text-sm font-semibold text-gray-500 hover:text-navy" title="Account">
@@ -742,6 +742,7 @@
         <li><a href="./about-us.html" class="hover:text-navy">About Us</a></li>
         <li><a href="./projects.html" class="hover:text-navy">List project</a></li>
         <li><a href="./create-project.html" data-requires-auth class="hover:text-navy">Post project</a></li>
+        
       </ul>
     </div>
     <div>
@@ -792,6 +793,7 @@
     <script src="../js/project.js"></script>
     <script src="../js/reviews.js"></script>
     <script src="../js/cardDetail.js"></script>
+    
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         if (window.AuthAPI) AuthAPI.initNavAuth();

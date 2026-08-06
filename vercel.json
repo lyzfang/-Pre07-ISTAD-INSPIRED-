@@ -21,6 +21,8 @@
     { "source": "/projectpage.html", "destination": "/html/projectpage.html" },
     { "source": "/projects.html", "destination": "/html/projects.html" },
     { "source": "/settings.html", "destination": "/html/settings.html" },
-    { "source": "/Signup.html", "destination": "/html/Signup.html" }
+    { "source": "/Signup.html", "destination": "/html/signup.html" },
+    { "source": "/signup.html", "destination": "/html/signup.html" }
   ]
 }
+
