@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -131,7 +131,7 @@
         // being sent here (e.g. Post Creator) -- see AuthAPI.redirectToLogin().
         // With no redirect, a normal sign-in lands on the user's dashboard.
         const redirectParam = new URLSearchParams(window.location.search).get('redirect');
-        const destination = redirectParam ? decodeURIComponent(redirectParam) : './dashboard.html';
+        const destination = redirectParam ? decodeURIComponent(redirectParam) : '/dashboard.html';
 
         const signUpLink = document.getElementById('signUpLink');
         if (redirectParam) {

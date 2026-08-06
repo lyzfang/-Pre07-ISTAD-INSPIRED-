@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -181,7 +181,7 @@
 
         // If already logged in, no reason to be here.
         if (window.AuthAPI && AuthAPI.isAuthenticated()) {
-          window.location.href = redirectParam ? decodeURIComponent(redirectParam) : './dashboard.html';
+          window.location.href = redirectParam ? decodeURIComponent(redirectParam) : '/dashboard.html';
           return;
         }
 
