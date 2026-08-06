@@ -1,6 +1,6 @@
 {
-  "buildCommand": "npm run build",
-  "installCommand": "npm install",
+  "buildCommand": "",
+  "installCommand": "",
   "outputDirectory": ".",
   "trailingSlash": false,
   "rewrites": [
@@ -21,9 +21,6 @@
     { "source": "/projectpage.html", "destination": "/html/projectpage.html" },
     { "source": "/projects.html", "destination": "/html/projects.html" },
     { "source": "/settings.html", "destination": "/html/settings.html" },
-    { "source": "/Signup.html", "destination": "/html/signup.html" },
-    { "source": "/signup.html", "destination": "/html/signup.html" }
+    { "source": "/Szzignup.html", "destination": "/html/Signup.html" }
   ]
 }
-
-
